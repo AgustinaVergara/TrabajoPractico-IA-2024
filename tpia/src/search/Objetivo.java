@@ -6,7 +6,11 @@ import frsf.cidisi.faia.state.AgentState;
 public class Objetivo extends GoalTest {
 	@Override
 	public boolean isGoalState(AgentState agentState) {
-		// completar con la condicion para ganar
+		if(((EstadoImpostor) agentState).getTripulantesVivos()==0 || (((EstadoImpostor) agentState).getTareasPendientes() == 0)) {
+			if(((EstadoImpostor) agentState).getEnergia()>=0) {
+				return true;
+			}
+		}
 		return false;
 	}
 }
