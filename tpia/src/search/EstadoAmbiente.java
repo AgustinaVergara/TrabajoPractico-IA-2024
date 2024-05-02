@@ -36,4 +36,10 @@ public class EstadoAmbiente extends EnvironmentState {
 		this.ubicacion = ubicacion;
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
